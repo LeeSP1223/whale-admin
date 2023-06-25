@@ -1,0 +1,23 @@
+server:
+  port: 8888
+
+spring:
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql:///whaledb
+  redis:
+    port: 6379
+    host: localhost
+
+logging:
+  level:
+    com.lsp: debug
+
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-delete-field: deleted
+      logic-not-delete-value: 0
+      logic-delete-value: 1
+  type-aliases-package: com.lsp.*.entity
